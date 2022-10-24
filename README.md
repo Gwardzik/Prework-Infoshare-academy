@@ -1,4 +1,9 @@
-# Prework-Infoshare-academy
-prework for java bootcamp Infoshare
-### This is repository of prework programs 
-Projekt one
+### Prework-Infoshare Academy
+
+#List of projects:
+
+1.
+2.
+3.
+
+
