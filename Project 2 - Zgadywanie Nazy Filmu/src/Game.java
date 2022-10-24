@@ -9,7 +9,7 @@ public class Game {
     // FILDS ----------------------------------------------------------------------------------
     File file = new File("Lista filmow");
     char[] gameboard;
-    char[] charsThatHaveBeenGuess = new char[1000];
+    char[] charsThatHaveBeenGuess = new char[100];
     Scanner scannerForInput = new Scanner(System.in);
 
     // FILDS ----------------------------------------------------------------------------------
@@ -25,7 +25,7 @@ public class Game {
         return numberOfRows;
     }
 
-    public String selectingFilmToGuess(int numberOfFilms) throws FileNotFoundException {
+    public String selectingRandomlyFilmToGuess(int numberOfFilms) throws FileNotFoundException {
         int random = (int) (Math.random() * (numberOfFilms - 1)) + 1;
         Scanner scanner = new Scanner(file);
         String chosenFilm = null;
@@ -34,6 +34,19 @@ public class Game {
 
         }
         return chosenFilm;
+    }
+
+    public int howManySpaces(String filmToGuess) {
+        int start = 0;
+        int count = 0;
+        while (start != -1) {
+            start = filmToGuess.indexOf(' ', start);
+            System.out.println(start);
+            if (start != -1)
+                count++;
+            System.out.println(count);
+        }
+        return count;
     }
 
     /* gameBoardCreat
@@ -56,15 +69,13 @@ public class Game {
         }
     }
 
-   /* isCHarInString
-        1. checking is char in string and updating it if it is
-        2. returns number of chars that has been updated
-
-    */
+    /* isCHarInString
+         1. checking is char in string and updating it if it is
+     */
     public boolean isCharInString(char guess, String filmToGuess) {
         int start = 0;
         int updateString = 1;
-        boolean isIt= false;
+        boolean isIt = false;
         while (updateString >= 0) {
 
             updateString = filmToGuess.indexOf(guess, start);
@@ -104,17 +115,26 @@ public class Game {
             }
         }
         //if char was not in array add guess in to array
-        if(!isIt){
-                for (int i = 0; i < charsThatHaveBeenGuess.length; i++) {
-                    if(charsThatHaveBeenGuess[i] == Character.MIN_VALUE){
-                        charsThatHaveBeenGuess[i] = guess;
-                       // System.out.println(charsThatHaveBeenGuess[i] + "ja");
-                        break;
-                    }
+        if (!isIt) {
+            for (int i = 0; i < charsThatHaveBeenGuess.length; i++) {
+                if (charsThatHaveBeenGuess[i] == Character.MIN_VALUE) {
+                    charsThatHaveBeenGuess[i] = guess;
+                    // System.out.println(charsThatHaveBeenGuess[i] + "ja");
+                    break;
                 }
             }
+        }
         return isIt;
     }
 
+    public void printUsedGuesses(String filmToGuess) {
+        for (int i = 0; i < charsThatHaveBeenGuess.length; i++) {
+            if ((charsThatHaveBeenGuess[i] != Character.MIN_VALUE) && (-1 == filmToGuess.indexOf(charsThatHaveBeenGuess[i]))) {
+                System.out.print(charsThatHaveBeenGuess[i]);
+            }
 
+        }
+    }
 }
+
+
