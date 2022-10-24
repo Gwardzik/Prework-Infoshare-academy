@@ -17,15 +17,12 @@ public class Main {
 
         // randomy selects film
         filmToGuess = gra.selectingRandomlyFilmToGuess(numberOfFilms);
-        System.out.println(filmToGuess);
         //fiding out how many space character in film name string
         numberOfSpacesInTitle = gra.howManySpaces(filmToGuess);
-        System.out.println(numberOfSpacesInTitle);
 
         // sets gameboard for specyfic film
         gra.gameBoardCreat(filmToGuess);
         //do usuniecia
-        System.out.println("\n" + filmToGuess);
 
         while (numberOfValidTrys < 10) {
             System.out.print("You are guessing: ");
@@ -40,6 +37,15 @@ public class Main {
             if (!gra.isCharInString(usserGuess, filmToGuess)) {
                 numberOfValidTrys++;
             }
+            if (gra.winCondition(numberOfSpacesInTitle)) {
+                System.out.println("You Win !");
+                System.out.println("You have guessed " + filmToGuess + " correctly");
+                break;
+            }
+            if(numberOfValidTrys >= 10){
+                System.out.println("Im sorry. You Have Lost \n Films name was" + filmToGuess);
+            }
+
         }
     }
 }

@@ -39,12 +39,14 @@ public class Game {
     public int howManySpaces(String filmToGuess) {
         int start = 0;
         int count = 0;
-        while (start != -1) {
-            start = filmToGuess.indexOf(' ', start);
-            System.out.println(start);
-            if (start != -1)
-                count++;
-            System.out.println(count);
+        boolean find = true;
+        while (find) {
+            start = filmToGuess.indexOf(' ', start) + 1;
+            if (start == 0) {
+                find = false;
+                continue;
+            }
+            count++;
         }
         return count;
     }
@@ -76,10 +78,9 @@ public class Game {
         int start = 0;
         int updateString = 1;
         boolean isIt = false;
+
         while (updateString >= 0) {
-
             updateString = filmToGuess.indexOf(guess, start);
-
             if (updateString < 0)
                 break;
             else {
@@ -134,6 +135,20 @@ public class Game {
             }
 
         }
+    }
+
+    public boolean winCondition(int numberOfSpaces) {
+        int count = 0;
+        boolean winOrLouse = false;
+        for (char c : gameboard) {
+            if (c == '_') {
+                count++;
+            }
+        }
+        if (count == numberOfSpaces) {
+            winOrLouse = true;
+        }
+        return winOrLouse;
     }
 }
 
