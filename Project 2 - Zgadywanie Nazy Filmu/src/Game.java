@@ -9,7 +9,7 @@ public class Game {
     // FILDS ----------------------------------------------------------------------------------
     File file = new File("Lista filmow");
     char[] gameboard;
-    char[] charsThatHaveBeenGuess = new char[100];
+    char[] charsThatHaveBeenGuess = new char[1000];
     Scanner scannerForInput = new Scanner(System.in);
 
     // FILDS ----------------------------------------------------------------------------------
@@ -90,8 +90,8 @@ public class Game {
         String usserString;
 
         usserString = (scannerForInput.nextLine()).toLowerCase();
-
-        return usserString.charAt(0);
+        guess = usserString.charAt(0);
+        return guess;
     }
 
     public boolean wasItAllredyGuessed(char guess) {

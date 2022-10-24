@@ -17,12 +17,11 @@ public class Main {
 
         // sets gameboard for specyfic film
         gra.gameBoardCreat(filmToGuess);
-        String[] test = new String[2];
+        
+        System.out.print("You are guessing:");
+        gra.printBoard();
 
-        System.out.println(filmToGuess);
-        System.out.println("Witaj w mojej grze. Zosta wybrany losowo film, który musisz zgadnąć");
-        System.out.println("To film do zgadnięcia:");
-        System.out.println("\n Prosze podaj pierwszą litere do zgdnięcia, masz 10 prób");
+        System.out.println("\n" + filmToGuess);
 
         while (numberOfValidTrys > 0) {
             usserGuess = gra.userInputStringInToChar();
@@ -37,7 +36,7 @@ public class Main {
 
 
             gra.printBoard();
-            System.out.println("Pozostało " + numberOfValidTrys + "prób");
+            System.out.println("\nPozostało " + numberOfValidTrys + "prób");
         }
     }
 }
