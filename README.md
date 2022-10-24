@@ -2,10 +2,8 @@
 
 ## List of projects:
 
-1.
-2.
-3.
+1. TicTacToe
+2. Odgadywanie tytułów filmów
+3. Space Challenge- to be expected
 
-
-![zadanie2A](https://user-images.githubusercontent.com/115525961/197588347-7c3157b1-2df3-476b-93f4-9a9cc9ea3f76.png)
-![zadanie 2B](https://user-images.githubusercontent.com/115525961/197588382-350ea9ea-3d71-40d4-8148-6451c85b20db.png)
+ file:///home/patryk/Desktop/screeny%20z%20zadan/zadanie%202B.png
