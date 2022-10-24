@@ -204,7 +204,7 @@ public class Game {
             }
         }
         if (iloscPelnychPul == grid.length * grid.length && result.equals("None"))
-            result = "Tie";
+            result = "tie";
 
         return result;
     }

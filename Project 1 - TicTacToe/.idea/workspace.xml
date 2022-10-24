@@ -50,19 +50,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/patryk/Desktop/Projekty/prework dla infoshare/Project 1 - TicTacToe/src/main/java/com/udacity/Game.java",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/patryk/Desktop/Projekty/prework dla infoshare/Project 1 - TicTacToe/src/main/java/com/udacity/Game.java&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Gradle.Tests in 'Project_1_-_TicTacToe.test'">
+}</component>
+  <component name="RunManager" selected="Application.Run Game">
     <configuration name="Run Game" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.udacity.Game" />
       <module name="Project_1_-_TicTacToe.main" />
@@ -213,7 +213,7 @@
       <workItem from="1666304501690" duration="107000" />
       <workItem from="1666464817964" duration="1426000" />
       <workItem from="1666620152936" duration="928000" />
-      <workItem from="1666621178109" duration="2457000" />
+      <workItem from="1666621178109" duration="3071000" />
     </task>
     <servers />
   </component>

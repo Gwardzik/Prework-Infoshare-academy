@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.udacity.GameTest" tests="23" skipped="0" failures="0" errors="0" timestamp="2022-10-24T15:11:36" hostname="Alfred" time="0.023">
+<testsuite name="com.udacity.GameTest" tests="23" skipped="0" failures="0" errors="0" timestamp="2022-10-24T18:22:53" hostname="Alfred" time="0.013">
   <properties/>
-  <testcase name="no_winner_case1" classname="com.udacity.GameTest" time="0.005"/>
+  <testcase name="no_winner_case1" classname="com.udacity.GameTest" time="0.002"/>
   <testcase name="no_winner_case2" classname="com.udacity.GameTest" time="0.0"/>
   <testcase name="no_winner_case3" classname="com.udacity.GameTest" time="0.001"/>
   <testcase name="no_winner_case4" classname="com.udacity.GameTest" time="0.0"/>
-  <testcase name="diagonal_x_win_case1" classname="com.udacity.GameTest" time="0.0"/>
-  <testcase name="diagonal_x_win_case2" classname="com.udacity.GameTest" time="0.001"/>
+  <testcase name="diagonal_x_win_case1" classname="com.udacity.GameTest" time="0.001"/>
+  <testcase name="diagonal_x_win_case2" classname="com.udacity.GameTest" time="0.0"/>
   <testcase name="vertical_x_win_case1" classname="com.udacity.GameTest" time="0.0"/>
   <testcase name="vertical_x_win_case2" classname="com.udacity.GameTest" time="0.0"/>
   <testcase name="vertical_x_win_case3" classname="com.udacity.GameTest" time="0.0"/>
   <testcase name="tie_game_case1" classname="com.udacity.GameTest" time="0.0"/>
   <testcase name="tie_game_case2" classname="com.udacity.GameTest" time="0.0"/>
   <testcase name="tie_game_case3" classname="com.udacity.GameTest" time="0.0"/>
-  <testcase name="horizontal_o_win_case1" classname="com.udacity.GameTest" time="0.001"/>
+  <testcase name="horizontal_o_win_case1" classname="com.udacity.GameTest" time="0.0"/>
   <testcase name="horizontal_o_win_case2" classname="com.udacity.GameTest" time="0.0"/>
   <testcase name="horizontal_o_win_case3" classname="com.udacity.GameTest" time="0.0"/>
-  <testcase name="horizontal_x_win_case1" classname="com.udacity.GameTest" time="0.002"/>
+  <testcase name="horizontal_x_win_case1" classname="com.udacity.GameTest" time="0.001"/>
   <testcase name="horizontal_x_win_case2" classname="com.udacity.GameTest" time="0.001"/>
-  <testcase name="horizontal_x_win_case3" classname="com.udacity.GameTest" time="0.001"/>
+  <testcase name="horizontal_x_win_case3" classname="com.udacity.GameTest" time="0.0"/>
   <testcase name="diagonal_o_win_case1" classname="com.udacity.GameTest" time="0.0"/>
-  <testcase name="diagonal_o_win_case2" classname="com.udacity.GameTest" time="0.001"/>
-  <testcase name="vertical_o_win_case1" classname="com.udacity.GameTest" time="0.001"/>
+  <testcase name="diagonal_o_win_case2" classname="com.udacity.GameTest" time="0.0"/>
+  <testcase name="vertical_o_win_case1" classname="com.udacity.GameTest" time="0.0"/>
   <testcase name="vertical_o_win_case2" classname="com.udacity.GameTest" time="0.001"/>
   <testcase name="vertical_o_win_case3" classname="com.udacity.GameTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
