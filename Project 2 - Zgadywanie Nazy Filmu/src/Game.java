@@ -14,6 +14,9 @@ public class Game {
 
     // FILDS ----------------------------------------------------------------------------------
 
+    /* howManyRowsInTheFile
+        1. checks and returns how many rows in the film file
+     */
     public int howManyRowsInTheFile() throws FileNotFoundException {
         Scanner scannerForFiles = new Scanner(file);
         int numberOfRows = 0;
