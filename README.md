@@ -11,6 +11,7 @@
   ![Screenshot from 2022-10-24 19-29-10](https://user-images.githubusercontent.com/115525961/197589705-136043b4-a8ef-4a1d-8b8d-a5551518e3af.png)
 
 # 3. Odgadywanie tytułów filmów
+*Warning ! its a mess. Read it only if you absolutly have to. It works though.*
   **what did i learn:**
   - "code as u go" is not the best way to code
   - i shoud find some graphical representation for building a projec. 
