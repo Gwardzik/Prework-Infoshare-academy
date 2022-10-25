@@ -15,7 +15,6 @@
   - "code as u go" is not the best way to code
   - i shoud find some graphical representation for building a projec. 
   - file manipulations is a bit cleaer but need more work
-  - thers many ways to do things
 
 # 5. Space Challenge- to be expected
 
