@@ -1,5 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+    U1 ship = new U1();
+    ship.
     }
+
 }
