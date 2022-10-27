@@ -2,16 +2,19 @@ public class U1 extends Rocket {
     int rocketWeightNoCargo = 10000;
     int maxRocketWeight = 18000;
     int cargoLimit = maxRocketWeight - rocketWeightNoCargo;
+    int launchSucces = 5;
+    int accurecyCoeficiant = 1000;
 
 
-    public int launch(int howMany) {
-        double losowaLiczba = Math.random() * 100;
+    @Override
+    public boolean launch() {
+        double losowaLiczba = (Math.random() * 100*accurecyCoeficiant)+1;
+
         System.out.println((int)losowaLiczba);
-        //(0.05*(currentRocketWeight-rocketWeightNoCargo)/cargoLimit);
-        System.out.println(losowaLiczba);
-        if((int)losowaLiczba == 0)
-            howMany++;
-        return howMany;
+
+        (launchSucces*accurecyCoeficiant)*((currentRocketWeight-rocketWeightNoCargo)/cargoLimit);
+
+        return true;
     }
 
     @Override
