@@ -3,11 +3,15 @@ public class U1 extends Rocket {
     int maxRocketWeight = 18000;
     int cargoLimit = maxRocketWeight - rocketWeightNoCargo;
 
-    @Override
-    public boolean launch() {
-        Math.random();
-        M(0.05*(currentRocketWeight-rocketWeightNoCargo)/cargoLimit);
-        return false;
+
+    public int launch(int howMany) {
+        double losowaLiczba = Math.random() * 100;
+        System.out.println((int)losowaLiczba);
+        //(0.05*(currentRocketWeight-rocketWeightNoCargo)/cargoLimit);
+        System.out.println(losowaLiczba);
+        if((int)losowaLiczba == 0)
+            howMany++;
+        return howMany;
     }
 
     @Override
