@@ -1,17 +1,21 @@
 public class U2 extends Rocket {
 
-    long rocketCost = 120000000;
-    int rocketWeight = 18000;
-    int maxWeightWithCargo = 29000;
+    int rocketWeightNoCargo = 18000;
+    int maxRocketWeight = 29000;
+    double cargoLimit = maxRocketWeight - rocketWeightNoCargo;
+    double launchSuccess = 0.04;
+    double landSuccess = 0.08;
+
 
     @Override
     public boolean launch() {
-        return false;
+        double randomNumber = Math.random() ;
+        return  randomNumber > launchSuccess * ((currentRocketWeight - rocketWeightNoCargo) / cargoLimit);
     }
 
     @Override
     public boolean land() {
-        return false;
-    }
+        double randomNumber = Math.random() ;
+        return  randomNumber > landSuccess * ((currentRocketWeight - rocketWeightNoCargo) / cargoLimit);    }
 }
 
