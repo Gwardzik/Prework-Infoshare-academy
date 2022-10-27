@@ -6,7 +6,7 @@ public class U1 extends Rocket {
     @Override
     public boolean launch() {
         Math.random();
-        M(0.05*(currentRocketWeight-rocketWeightNoCargo)/cargoLimit)
+        M(0.05*(currentRocketWeight-rocketWeightNoCargo)/cargoLimit);
         return false;
     }
 
