@@ -19,10 +19,11 @@ public class Rocket implements SpaceShip {
         return (maxWeightWithCargo > currentRocketWeight + item.weight);
 
     }
-
+    //takes an Item object and updates the current weight of the rocket
     @Override
     public void carry(Item item) {
         currentRocketWeight = currentRocketWeight + item.weight;
+        System.out.println(item.weight);
     }
 
 

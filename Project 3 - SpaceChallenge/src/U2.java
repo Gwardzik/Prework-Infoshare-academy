@@ -5,7 +5,10 @@ public class U2 extends Rocket {
     double cargoLimit = maxRocketWeight - rocketWeightNoCargo;
     double launchSuccess = 0.04;
     double landSuccess = 0.08;
-
+    U2() {
+        maxWeightWithCargo = maxRocketWeight;
+        currentRocketWeight = rocketWeightNoCargo;
+    }
 
     @Override
     public boolean launch() {
