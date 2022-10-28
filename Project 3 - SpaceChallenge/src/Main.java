@@ -4,14 +4,17 @@ public class Main {
 
     public static void main(String[] args) {
 
-        U1 ship = new U1();
 
         Simulation simulation = new Simulation();
         try {
-             simulation.loadItems();
+            //simulation.loadItems();
+            simulation.loadU1(simulation.loadItems());
 
         } catch (FileNotFoundException notFoundException) {
             System.out.println("FileNotFound exeptiona has been ussed");
         }
+
+
+
     }
 }

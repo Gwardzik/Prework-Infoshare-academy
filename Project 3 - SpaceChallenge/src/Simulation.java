@@ -23,10 +23,18 @@ public class Simulation {
             newItem.weight = Integer.parseInt(tempString.substring(tempString.indexOf("=") + 1));
             //adding object to ArrayList
             itemArrayList.add(newItem);
-            System.out.println(itemArrayList);
         }
-
         return itemArrayList;
+    }
+
+    ArrayList loadU1(ArrayList<Item> newItem){
+
+        ArrayList<U1> rocketList = new ArrayList<>();
+        U1 newRocket = new U1();
+        System.out.println(newItem.get(0));
+        System.out.println(newRocket.canCarry(newItem.get(0)));
+
+        return rocketList;
     }
 
 }
