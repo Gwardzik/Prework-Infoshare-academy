@@ -1,6 +1,6 @@
 public class Rocket implements SpaceShip {
 
-    int currentRocketWeight = 10000;
+    int currentRocketWeight;
     int maxWeightWithCargo;
 
 

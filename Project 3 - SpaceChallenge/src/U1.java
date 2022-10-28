@@ -5,15 +5,20 @@ public class U1 extends Rocket {
     double launchSuccess = 0.05;
     double landSuccess = 0.01;
 
+    U1() {
+        maxWeightWithCargo = maxRocketWeight;
+        currentRocketWeight = rocketWeightNoCargo;
+    }
 
     @Override
     public boolean launch() {
-        double randomNumber = Math.random() ;
-        return  randomNumber > launchSuccess * ((currentRocketWeight - rocketWeightNoCargo) / cargoLimit);
+        double randomNumber = Math.random();
+        return randomNumber > launchSuccess * ((currentRocketWeight - rocketWeightNoCargo) / cargoLimit);
     }
 
     @Override
     public boolean land() {
-        double randomNumber = Math.random() ;
-        return  randomNumber > landSuccess * ((currentRocketWeight - rocketWeightNoCargo) / cargoLimit);    }
+        double randomNumber = Math.random();
+        return randomNumber > landSuccess * ((currentRocketWeight - rocketWeightNoCargo) / cargoLimit);
+    }
 }

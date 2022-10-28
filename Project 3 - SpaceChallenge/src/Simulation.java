@@ -2,6 +2,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Simulation {
@@ -27,12 +28,10 @@ public class Simulation {
         return itemArrayList;
     }
 
-    ArrayList loadU1(ArrayList<Item> newItem){
+    ArrayList<U1> loadU1(ArrayList<Item> newItem){
 
         ArrayList<U1> rocketList = new ArrayList<>();
         U1 newRocket = new U1();
-        System.out.println(newItem.get(0));
-        System.out.println(newRocket.canCarry(newItem.get(0)));
 
         return rocketList;
     }
