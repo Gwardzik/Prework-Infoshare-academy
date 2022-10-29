@@ -11,7 +11,7 @@ public class Simulation {
     File phase1File = new File("/home/patryk/Desktop/Projekty/prework dla infoshare/Project 3 - SpaceChallenge/src/cargo files/Phase-1.txt");
     String tempString;
 
-    ArrayList loadItems() throws FileNotFoundException {
+    ArrayList<Item> loadItems() throws FileNotFoundException {
 
         ArrayList<Item> itemArrayList = new ArrayList<>();
 
@@ -32,11 +32,25 @@ public class Simulation {
     }
 
     ArrayList<U1> loadU1(ArrayList<Item> newItem) {
-        int i = 0;
 
         ArrayList<U1> rocketList = new ArrayList<>();
-            newItem.remove(0);
-        System.out.println(newItem.size());
+
+
+        while(!newItem.isEmpty()){
+
+            U1 newRocket = new U1();
+            int i =0;
+
+            while(newRocket.canCarry(newItem.get(i)  )){
+               newRocket.carry(newItem.get(i));
+               newItem.remove(i);
+               i++;
+                System.out.println(i);
+               if(newItem.isEmpty())
+                   break;
+            }
+            rocketList.add(newRocket);
+        }
         return rocketList;
     }
 

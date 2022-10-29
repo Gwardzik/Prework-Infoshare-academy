@@ -6,8 +6,8 @@ public class Main {
 
         Simulation simulation = new Simulation();
         try {
-            //simulation.loadItems();
-            System.out.println(simulation.loadU1(simulation.loadItems()));
+           // simulation.loadItems();
+            simulation.loadU1(simulation.loadItems());
 
 
         } catch (FileNotFoundException notFoundException) {

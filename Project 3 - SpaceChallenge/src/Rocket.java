@@ -23,7 +23,6 @@ public class Rocket implements SpaceShip {
     @Override
     public void carry(Item item) {
         currentRocketWeight = currentRocketWeight + item.weight;
-        System.out.println(item.weight);
     }
 
 
