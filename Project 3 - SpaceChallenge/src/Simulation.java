@@ -34,22 +34,8 @@ public class Simulation {
     ArrayList<U1> loadU1(ArrayList<Item> newItem) {
 
         ArrayList<U1> rocketList = new ArrayList<>();
-        while(newItem.size()!=0) {
-            U1 newRocket = new U1();
-                int i =0;
-
-                while (newRocket.canCarry(newItem.get(i))) {
-                    System.out.println("------------------------------------");
-                    newRocket.carry(newItem.get(i));
-                    System.out.println(newRocket.currentRocketWeight);
-                    newItem.remove(i);
-                    System.out.println("------------------------------------");
-                    i++;
-                }
-
-            rocketList.add(newRocket);
-        }
-        System.out.println(newItem.isEmpty());
+            newItem.remove(0);
+        System.out.println(newItem.size());
         return rocketList;
     }
 
