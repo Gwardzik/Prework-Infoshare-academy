@@ -27,11 +27,12 @@ public class Simulation {
             //adding object to ArrayList
             itemArrayList.add(newItem);
         }
-        // sorting algoritm in the future to be added at this spot.
+        // sorting algoritm in the future to be added at this spot.aa
         return itemArrayList;
     }
 
     ArrayList<U1> loadU1(ArrayList<Item> newItem) {
+        int i = 0;
 
         ArrayList<U1> rocketList = new ArrayList<>();
             newItem.remove(0);
