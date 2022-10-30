@@ -58,4 +58,31 @@ public class Simulation {
         return rocketList;
     }
 
+    ArrayList<U2> loadU2(ArrayList<Item> newItem2) {
+
+        ArrayList<U2> rocketList2 = new ArrayList<>();
+        ArrayList<Integer> toBeDeleted = new ArrayList<>();
+
+        while (!newItem2.isEmpty()) {
+            //creating new rocket
+            U2 newRocket = new U2();
+
+            //adding weight to the rocket by checking what items will fit
+            for (int i = 0; i < newItem2.size(); i++) {
+                if (newRocket.canCarry(newItem2.get(i))) {
+                    newRocket.carry(newItem2.get(i));
+                    toBeDeleted.add(i);
+                }
+            }
+            //removing items from list that has been already added to newRocket so it does not repeat in next one
+            for (int i = 0; i < toBeDeleted.size(); i++) {
+                newItem2.remove((int) toBeDeleted.get((int) toBeDeleted.size() - 1) - i);
+            }
+            //clearing list from items that has been already deleted
+            toBeDeleted.clear();
+            rocketList2.add(newRocket);
+        }
+        return rocketList2;
+    }
+
 }

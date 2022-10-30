@@ -7,7 +7,7 @@ public class Main {
         Simulation simulation = new Simulation();
         try {
            // simulation.loadItems();
-            simulation.loadU1(simulation.loadItems());
+            simulation.loadU2(simulation.loadItems());
 
 
         } catch (FileNotFoundException notFoundException) {
