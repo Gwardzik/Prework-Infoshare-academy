@@ -36,19 +36,25 @@ public class Simulation {
         ArrayList<U1> rocketList = new ArrayList<>();
 
 
-        while(!newItem.isEmpty()){
+        while (!newItem.isEmpty()) {
 
             U1 newRocket = new U1();
+            System.out.println(1);
+            int originalItemSize = newItem.size();
+            int numberOfDeletions = 0;
             int i =0;
+            while (newItem.size() == newItem.lastIndexOf(newItem)) {
+                    i = 0;
+                if (newRocket.canCarry(newItem.get(i))) {
+                    newRocket.carry(newItem.get(i));
+                    newItem.remove(i);
+                    numberOfDeletions++;
+                    i++;
+                }
 
-            while(newRocket.canCarry(newItem.get(i)  )){
-               newRocket.carry(newItem.get(i));
-               newItem.remove(i);
-               i++;
-                System.out.println(i);
-               if(newItem.isEmpty())
-                   break;
+
             }
+
             rocketList.add(newRocket);
         }
         return rocketList;
