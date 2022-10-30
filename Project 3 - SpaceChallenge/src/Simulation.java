@@ -85,4 +85,16 @@ public class Simulation {
         return rocketList2;
     }
 
+    int runSimulation (ArrayList<Rocket> rocketList){
+            int currentCost = 0;
+            Rocket currentRocket = new Rocket();
+            currentRocket =rocketList.get(0);
+        for (int i = 0; i < 10; i++) {
+
+            System.out.println(  currentRocket.launch());
+        }
+
+
+        return 0;
+    }
 }

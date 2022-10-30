@@ -4,6 +4,7 @@ public class U1 extends Rocket {
     double cargoLimit = maxRocketWeight - rocketWeightNoCargo;
     double launchSuccess = 0.05;
     double landSuccess = 0.01;
+    int priceOfSingelRocket = 100;
 
     U1() {
         maxWeightWithCargo = maxRocketWeight;
