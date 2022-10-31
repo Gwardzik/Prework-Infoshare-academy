@@ -31,14 +31,14 @@ public class Simulation {
         return itemArrayList;
     }
 
-    ArrayList<U1> loadU1(ArrayList<Item> newItem) {
+    ArrayList<Rocket> loadU1(ArrayList<Item> newItem) {
 
-        ArrayList<U1> rocketList = new ArrayList<>();
+        ArrayList<Rocket> rocketList = new ArrayList<>();
         ArrayList<Integer> toBeDeleted = new ArrayList<>();
 
         while (!newItem.isEmpty()) {
             //creating new rocket
-            U1 newRocket = new U1();
+            Rocket newRocket = new Rocket();
 
             //adding weight to the rocket by checking what items will fit
             for (int i = 0; i < newItem.size(); i++) {
@@ -91,7 +91,7 @@ public class Simulation {
             currentRocket =rocketList.get(0);
         for (int i = 0; i < 10; i++) {
 
-            System.out.println(  currentRocket.launch());
+            System.out.println( "hello");
         }
 
 
