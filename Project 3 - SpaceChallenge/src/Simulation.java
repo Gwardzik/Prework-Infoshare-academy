@@ -38,7 +38,7 @@ public class Simulation {
 
         while (!newItem.isEmpty()) {
             //creating new rocket
-            Rocket newRocket = new Rocket();
+            Rocket newRocket = new U1();
 
             //adding weight to the rocket by checking what items will fit
             for (int i = 0; i < newItem.size(); i++) {
@@ -58,14 +58,14 @@ public class Simulation {
         return rocketList;
     }
 
-    ArrayList<U2> loadU2(ArrayList<Item> newItem2) {
+    ArrayList<Rocket> loadU2(ArrayList<Item> newItem2) {
 
-        ArrayList<U2> rocketList2 = new ArrayList<>();
+        ArrayList<Rocket> rocketList2 = new ArrayList<>();
         ArrayList<Integer> toBeDeleted = new ArrayList<>();
 
         while (!newItem2.isEmpty()) {
             //creating new rocket
-            U2 newRocket = new U2();
+            Rocket newRocket = new U2();
 
             //adding weight to the rocket by checking what items will fit
             for (int i = 0; i < newItem2.size(); i++) {
@@ -88,13 +88,10 @@ public class Simulation {
     int runSimulation (ArrayList<Rocket> rocketList){
             int currentCost = 0;
             Rocket currentRocket = new Rocket();
+
             currentRocket =rocketList.get(0);
-        for (int i = 0; i < 10; i++) {
 
-            System.out.println( "hello");
-            System.out.println("is it working git test");
-        }
-
+        System.out.println("jea baby");
 
         return 0;
     }

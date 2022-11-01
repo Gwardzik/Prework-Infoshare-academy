@@ -7,8 +7,9 @@ public class Main {
         Simulation simulation = new Simulation();
         try {
 
-            simulation.runSimulation(simulation.loadU1(simulation.loadItems()));
+           // simulation.runSimulation(simulation.loadU1(simulation.loadItems()));
 
+            simulation.runSimulation(simulation.loadU1(simulation.loadItems()));
 
         } catch (FileNotFoundException notFoundException) {
             System.out.println("FileNotFound exeptiona has been ussed");
