@@ -42,6 +42,7 @@ public class Simulation {
 
             //adding weight to the rocket by checking what items will fit
             for (int i = 0; i < newItem.size(); i++) {
+                System.out.println();
                 if (newRocket.canCarry(newItem.get(i))) {
                     newRocket.carry(newItem.get(i));
                     toBeDeleted.add(i);
@@ -87,11 +88,14 @@ public class Simulation {
 
     int runSimulation (ArrayList<Rocket> rocketList){
             int currentCost = 0;
+        System.out.println(rocketList.size());
             Rocket currentRocket = new Rocket();
+        for (int i = 0; i < rocketList.size(); i++) {
 
-            currentRocket =rocketList.get(0);
+            currentRocket =rocketList.get(i);
+            System.out.println(currentRocket.currentRocketWeight);
+        }
 
-        System.out.println("jea baby");
 
         return 0;
     }
