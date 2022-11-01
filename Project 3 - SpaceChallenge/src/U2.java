@@ -10,6 +10,8 @@ public class U2 extends Rocket {
     U2() {
         maxWeightWithCargo = maxRocketWeight;
         currentRocketWeight = rocketWeightNoCargo;
+        rocketPrice = priceOfSingelRocket;
+
     }
 
     @Override

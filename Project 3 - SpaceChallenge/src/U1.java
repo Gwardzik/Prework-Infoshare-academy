@@ -9,6 +9,7 @@ public class U1 extends Rocket {
     U1() {
         maxWeightWithCargo = maxRocketWeight;
         currentRocketWeight = rocketWeightNoCargo;
+        rocketPrice = priceOfSingelRocket;
     }
 
     @Override

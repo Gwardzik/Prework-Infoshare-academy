@@ -8,14 +8,11 @@ import java.util.Scanner;
 
 public class Simulation {
 
-    File phase1File = new File("/home/patryk/Desktop/Projekty/prework dla infoshare/Project 3 - SpaceChallenge/src/cargo files/Phase-1.txt");
-    String tempString;
-
-    ArrayList<Item> loadItems() throws FileNotFoundException {
-
+    ArrayList<Item> loadItems(File fileToLoad) throws FileNotFoundException {
+        String tempString;
         ArrayList<Item> itemArrayList = new ArrayList<>();
 
-        Scanner scanner = new Scanner(phase1File);
+        Scanner scanner = new Scanner(fileToLoad);
 
         while (scanner.hasNextLine()) {
             Item newItem = new Item();
@@ -26,6 +23,7 @@ public class Simulation {
             newItem.weight = Integer.parseInt(tempString.substring(tempString.indexOf("=") + 1));
             //adding object to ArrayList
             itemArrayList.add(newItem);
+           // System.out.println(newItem.name + "      " + newItem.weight);
         }
         // sorting algoritm in the future to be added at this spot.aa
         return itemArrayList;
@@ -87,22 +85,29 @@ public class Simulation {
 
     int runSimulation(ArrayList<Rocket> rocketList) {
         int currentCost = 0;
-        System.out.println(rocketList.size());
         Rocket currentRocket = new Rocket();
         for (int i = 0; i < rocketList.size(); i++) {
 
             currentRocket = rocketList.get(i);
-
+            System.out.println("Prepering for lounch seguens 3..2..1..0 blast off");
             while (!currentRocket.launch()) {
-                System.out.println("booom launching, im sory, tham tha tham");
+                currentCost += currentRocket.rocketPrice;
+                System.out.println("booom launching,try againm (");
             }
+            System.out.println("launching sucess !!!!");
+            System.out.println("Prepering for landing aprouch 3..2..1..0 blast off");
             while (!currentRocket.land()) {
-                System.out.println("booom landing, im sory, tham tha tham");
+                currentCost += currentRocket.rocketPrice;
+                System.out.println("booom landing, im sorry, try again ;(");
             }
-            System.out.println(currentRocket.currentRocketWeight);
+            System.out.println("landing sucess !!!!");
+
+            currentCost += currentRocket.rocketPrice;
+            System.out.println(currentCost);
+            System.out.println("Current cost" + currentCost + "\n " + "---------------------");
         }
 
 
-        return 0;
+        return currentCost;
     }
 }

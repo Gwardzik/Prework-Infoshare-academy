@@ -2,6 +2,7 @@ public class Rocket implements SpaceShip {
 
     int currentRocketWeight;
     int maxWeightWithCargo;
+    int rocketPrice;
 
 
     @Override
