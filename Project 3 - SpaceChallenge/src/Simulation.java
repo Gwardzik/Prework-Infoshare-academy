@@ -2,8 +2,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.Scanner;
 
 public class Simulation {
@@ -85,9 +83,12 @@ public class Simulation {
 
     int runSimulation(ArrayList<Rocket> rocketList) {
         int currentCost = 0;
+        System.out.println("Simulation has starte" +
+                "--------------------------------------------------------------");
+        //System.out.println(rocketList.get(0));
+
         Rocket currentRocket = new Rocket();
         for (int i = 0; i < rocketList.size(); i++) {
-
             currentRocket = rocketList.get(i);
             System.out.println("Prepering for lounch seguens 3..2..1..0 blast off");
             while (!currentRocket.launch()) {
@@ -106,7 +107,8 @@ public class Simulation {
             System.out.println(currentCost);
             System.out.println("Current cost" + currentCost + "\n " + "---------------------");
         }
-
+        System.out.println("Simulation has ended" +
+                "--------------------------------------------------------------");
 
         return currentCost;
     }

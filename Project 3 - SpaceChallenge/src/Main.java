@@ -15,44 +15,41 @@ public class Main {
         int costU2Phase2 = 0;
         try {
             //Loading Items for phase one and two
-            ArrayList<Item> phase1ItemList = new ArrayList<>();
+            ArrayList<Item> phase1ItemList;
             phase1ItemList = simulation.loadItems(phase1File);
-            ArrayList<Item> phase2ItemList = new ArrayList<>();
+            ArrayList<Item> phase2ItemList;
             phase2ItemList = simulation.loadItems(phase2File);
 
             //loading U1 rocket for phase one
-            ArrayList<Rocket> phase1U1Rocket = new ArrayList<>();
-         //   phase1U1Rocket = simulation.loadU1(phase1ItemList);
+            ArrayList<Rocket> phase1U1Rocket;
+            phase1U1Rocket = simulation.loadU1(phase1ItemList);
             // loading U1 Rocket for phase two
-            ArrayList<Rocket> phase2U1Rocket = new ArrayList<>();
-          //  phase2U1Rocket = simulation.loadU1(phase2ItemList);
+            ArrayList<Rocket> phase2U1Rocket;
+            phase2U1Rocket = simulation.loadU1(phase2ItemList);
 
             //loading U2 rocket for phase one
-            ArrayList<Rocket> phase1U2Rocket = new ArrayList<>();
-            phase1U2Rocket = simulation.loadU1(phase1ItemList);
+            ArrayList<Rocket> phase1U2Rocket;
+            phase1U2Rocket = simulation.loadU2(phase1ItemList);
             // loading U2 Rocket for phase two
-            ArrayList<Rocket> phase2U2Rocket = new ArrayList<>();
-            phase2U2Rocket = simulation.loadU1(phase2ItemList);
+            ArrayList<Rocket> phase2U2Rocket;
+            phase2U2Rocket = simulation.loadU2(phase2ItemList);
 
 
             // cost simulation for U1 phase 1 and two
 
-           // costU1Phase1 = simulation.runSimulation(phase1U1Rocket);
-         //   costU1Phase2 = simulation.runSimulation((phase2U1Rocket));
+           costU1Phase1 = simulation.runSimulation(phase1U1Rocket);
+           costU1Phase2 = simulation.runSimulation((phase2U1Rocket));
 
             System.out.println(costU1Phase1 + "   " + costU1Phase2);
 
             // cost simulation for U2 Phase and two with integrated loading
-            System.out.println("Rocket U 2 Cost : -----------------------------");
             costU2Phase1 = simulation.runSimulation(phase1U2Rocket);
             costU2Phase2 = simulation.runSimulation(phase2U2Rocket);
-
-            System.out.println(costU2Phase1+ "   " + costU2Phase2);
+            System.out.println(costU2Phase1 + "   " + costU2Phase2);
 
         } catch (FileNotFoundException notFoundException) {
             System.out.println("FileNotFound exeptiona has been ussed");
         }
-        // simulation.runSimulation(simulation.loadU1(simulation.loadItems()));
 
     }
 }
