@@ -30,30 +30,35 @@ public class Main {
             phase2ItemList = simulation.loadItems(phase2File);
             phase2ItemList = simulation.bubbleSort(phase2ItemList);
 
-
-            System.out.println("\n");
-
             System.out.println("------------------------------------------");
-            System.out.println(" Loading U1 rockets");
+            System.out.println(" Loading U1 rockets phase 1 and 2");
             System.out.println("------------------------------------------");
-
-            //loading U1 rocket for phase one
+            //phase 1
             ArrayList<Rocket> phase1U1Rocket;
             phase1U1Rocket = simulation.loadU1(phase1ItemList);
-            // loading U1 Rocket for phase two
+            //phase 2
             ArrayList<Rocket> phase2U1Rocket;
             phase2U1Rocket = simulation.loadU1(phase2ItemList);
+
+
+            phase1ItemList = simulation.loadItems(phase1File);
+            phase1ItemList = simulation.bubbleSort(phase1ItemList);
+
+            phase2ItemList = simulation.loadItems(phase2File);
+            phase2ItemList = simulation.bubbleSort(phase2ItemList);
+
+
             System.out.println("------------------------------------------");
-            System.out.println(" Loading U2 rockets");
+            System.out.println(" Loading U2 rockets phase 1 and 2");
             System.out.println("------------------------------------------");
 
             //loading U2 rocket for phase one
             ArrayList<Rocket> phase1U2Rocket;
             phase1U2Rocket = simulation.loadU2(phase1ItemList);
+
             // loading U2 Rocket for phase two
             ArrayList<Rocket> phase2U2Rocket;
             phase2U2Rocket = simulation.loadU2(phase2ItemList);
-
 
             // cost simulation for U1 phase 1 and two
 /*

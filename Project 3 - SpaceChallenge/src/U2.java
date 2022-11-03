@@ -15,14 +15,15 @@ public class U2 extends Rocket {
     }
 
     @Override
-    public boolean launch() {
-        double randomNumber = Math.random() ;
-        return  randomNumber > launchSuccess * ((currentRocketWeight - rocketWeightNoCargo) / cargoLimit);
+    public boolean land() {
+        double randomNumber = Math.random();
+        return randomNumber > landSuccess * ((currentRocketWeight - rocketWeightNoCargo) / cargoLimit);
     }
 
     @Override
-    public boolean land() {
-        double randomNumber = Math.random() ;
-        return  randomNumber > landSuccess * ((currentRocketWeight - rocketWeightNoCargo) / cargoLimit);    }
+    public boolean launch() {
+        double randomNumber = Math.random();
+        return randomNumber > launchSuccess * ((currentRocketWeight - rocketWeightNoCargo) / cargoLimit);
+    }
 }
 

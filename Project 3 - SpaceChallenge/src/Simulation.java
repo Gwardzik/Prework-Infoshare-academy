@@ -26,7 +26,6 @@ public class Simulation {
     }
 
     ArrayList<Item> bubbleSort(ArrayList<Item> itemListToSort) {
-        System.out.println("-----------------------\n" + "Sorted List\n" + "-----------------------");
         ArrayList<Item> temp = new ArrayList<>();
         temp.add(itemListToSort.get(1));
         boolean end = false;
@@ -42,9 +41,7 @@ public class Simulation {
                 }
             }
         }
-        for (int i = 0; i < itemListToSort.size(); i++) {
-            System.out.println(itemListToSort.get(i).name + "   "+ itemListToSort.get(i).weight);
-        }
+
 
         return itemListToSort;
     }
@@ -83,13 +80,12 @@ public class Simulation {
     }
 
     ArrayList<Rocket> loadU2(ArrayList<Item> newItem2) {
-
         ArrayList<Rocket> rocketList2 = new ArrayList<>();
         ArrayList<Integer> toBeDeleted = new ArrayList<>();
+
         while (!newItem2.isEmpty()) {
             //creating new rocket
             Rocket newRocket = new U2();
-
             //adding weight to the rocket by checking what items will fit
             for (int i = 0; i < newItem2.size(); i++) {
                 if (newRocket.canCarry(newItem2.get(i))) {
@@ -97,6 +93,8 @@ public class Simulation {
                     toBeDeleted.add(i);
                 }
             }
+            System.out.println("New U2 Rocket has been created " + newRocket.currentRocketWeight);
+
             //removing items from list that has been already added to newRocket so it does not repeat in next one
             while (!toBeDeleted.isEmpty()) {
                 newItem2.remove((int) toBeDeleted.get(toBeDeleted.size() - 1));
@@ -105,6 +103,8 @@ public class Simulation {
             //clearing list from items that has been already deleted
             rocketList2.add(newRocket);
         }
+        System.out.println("----------------------");
+
         return rocketList2;
     }
 
