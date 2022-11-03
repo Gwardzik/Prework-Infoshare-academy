@@ -38,20 +38,21 @@ public class Simulation {
 
             //adding weight to the rocket by checking what items will fit
             for (int i = 0; i < newItem.size(); i++) {
+                //   System.out.println(newItem.get(i).weight);
                 if (newRocket.canCarry(newItem.get(i))) {
                     newRocket.carry(newItem.get(i));
                     toBeDeleted.add(i);
-                    //System.out.println("Rocket " + i + "has been added");
+                    //  System.out.println(toBeDeleted);
+                    //  System.out.println("Rocket " + i + "has been added");
                 }
             }
             System.out.println("New U1 Rocket has been created " + newRocket.currentRocketWeight);
 
             //removing items from list that has been already added to newRocket so it does not repeat in next one
-            for (int i = 0; i < toBeDeleted.size(); i++) {
-                newItem.remove((int) toBeDeleted.get((int) toBeDeleted.size() - 1) - i);
+            while (!toBeDeleted.isEmpty()) {
+                newItem.remove((int) toBeDeleted.get(toBeDeleted.size() - 1));
+                toBeDeleted.remove(toBeDeleted.size() - 1);
             }
-            //clearing list from items that has been already deleted
-            toBeDeleted.clear();
             rocketList.add(newRocket);
         }
         System.out.println("----------------------");
@@ -75,11 +76,11 @@ public class Simulation {
                 }
             }
             //removing items from list that has been already added to newRocket so it does not repeat in next one
-            for (int i = 0; i < toBeDeleted.size(); i++) {
-                newItem2.remove((int) toBeDeleted.get((int) toBeDeleted.size() - 1) - i);
+            while (!toBeDeleted.isEmpty()) {
+                newItem2.remove((int) toBeDeleted.get(toBeDeleted.size() - 1));
+                toBeDeleted.remove(toBeDeleted.size() - 1);
             }
             //clearing list from items that has been already deleted
-            toBeDeleted.clear();
             rocketList2.add(newRocket);
         }
         return rocketList2;
