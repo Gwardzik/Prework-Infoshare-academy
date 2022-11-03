@@ -21,10 +21,32 @@ public class Simulation {
             newItem.weight = Integer.parseInt(tempString.substring(tempString.indexOf("=") + 1));
             //adding object to ArrayList
             itemArrayList.add(newItem);
-            System.out.println("New item has been added :" + newItem.name + "      " + newItem.weight);
         }
-        // sorting algoritm in the future to be added at this spot.aa
         return itemArrayList;
+    }
+
+    ArrayList<Item> bubbleSort(ArrayList<Item> itemListToSort) {
+        System.out.println("-----------------------\n" + "Sorted List\n" + "-----------------------");
+        ArrayList<Item> temp = new ArrayList<>();
+        temp.add(itemListToSort.get(1));
+        boolean end = false;
+
+        while (!end) {
+            end = true;
+            for (int i = 0; i < itemListToSort.size() - 1; i++) {
+                if (itemListToSort.get(i).weight < itemListToSort.get(i + 1).weight) {
+                    temp.set(0, (itemListToSort.get(i + 1)));
+                    itemListToSort.set(i + 1, itemListToSort.get(i));
+                    itemListToSort.set(i, temp.get(0));
+                    end = false;
+                }
+            }
+        }
+        for (int i = 0; i < itemListToSort.size(); i++) {
+            System.out.println(itemListToSort.get(i).name + "   "+ itemListToSort.get(i).weight);
+        }
+
+        return itemListToSort;
     }
 
     ArrayList<Rocket> loadU1(ArrayList<Item> newItem) {

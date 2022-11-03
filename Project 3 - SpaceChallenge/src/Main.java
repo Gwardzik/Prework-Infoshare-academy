@@ -14,18 +14,22 @@ public class Main {
         int costU1Phase2 = 0;
         int costU2Phase1 = 0;
         int costU2Phase2 = 0;
+
         try {
             //Loading Items for phase one and two
             System.out.println("------------------------------------------");
-            System.out.println(" Creating item list fot PHASE 1 ");
+            System.out.println(" Creating and sorting item list fot PHASE 1 ");
             System.out.println("------------------------------------------");
             ArrayList<Item> phase1ItemList;
             phase1ItemList = simulation.loadItems(phase1File);
+            phase1ItemList = simulation.bubbleSort(phase1ItemList);
             System.out.println("------------------------------------------");
-            System.out.println(" Creating item list fot PHASE 2 ");
+            System.out.println(" Creating and sorting item list fot PHASE 2 ");
             System.out.println("------------------------------------------");
             ArrayList<Item> phase2ItemList;
             phase2ItemList = simulation.loadItems(phase2File);
+            phase2ItemList = simulation.bubbleSort(phase2ItemList);
+
 
             System.out.println("\n");
 
