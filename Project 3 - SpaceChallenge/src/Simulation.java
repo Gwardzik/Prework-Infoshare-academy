@@ -21,7 +21,7 @@ public class Simulation {
             newItem.weight = Integer.parseInt(tempString.substring(tempString.indexOf("=") + 1));
             //adding object to ArrayList
             itemArrayList.add(newItem);
-           // System.out.println(newItem.name + "      " + newItem.weight);
+            System.out.println("New item has been added :" + newItem.name + "      " + newItem.weight);
         }
         // sorting algoritm in the future to be added at this spot.aa
         return itemArrayList;
@@ -41,8 +41,11 @@ public class Simulation {
                 if (newRocket.canCarry(newItem.get(i))) {
                     newRocket.carry(newItem.get(i));
                     toBeDeleted.add(i);
+                    //System.out.println("Rocket " + i + "has been added");
                 }
             }
+            System.out.println("New U1 Rocket has been created " + newRocket.currentRocketWeight);
+
             //removing items from list that has been already added to newRocket so it does not repeat in next one
             for (int i = 0; i < toBeDeleted.size(); i++) {
                 newItem.remove((int) toBeDeleted.get((int) toBeDeleted.size() - 1) - i);
@@ -51,6 +54,8 @@ public class Simulation {
             toBeDeleted.clear();
             rocketList.add(newRocket);
         }
+        System.out.println("----------------------");
+
         return rocketList;
     }
 
@@ -58,7 +63,6 @@ public class Simulation {
 
         ArrayList<Rocket> rocketList2 = new ArrayList<>();
         ArrayList<Integer> toBeDeleted = new ArrayList<>();
-
         while (!newItem2.isEmpty()) {
             //creating new rocket
             Rocket newRocket = new U2();
@@ -83,7 +87,7 @@ public class Simulation {
 
     int runSimulation(ArrayList<Rocket> rocketList) {
         int currentCost = 0;
-        System.out.println("Simulation has starte" +
+        System.out.println("Simulation has starte\n" +
                 "--------------------------------------------------------------");
         //System.out.println(rocketList.get(0));
 

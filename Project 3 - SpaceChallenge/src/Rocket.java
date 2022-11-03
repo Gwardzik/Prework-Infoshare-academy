@@ -17,7 +17,7 @@ public class Rocket implements SpaceShip {
 
     @Override
     public boolean canCarry(Item item) {
-        return (maxWeightWithCargo > currentRocketWeight + item.weight);
+        return (maxWeightWithCargo >= currentRocketWeight + item.weight);
 
     }
     //takes an Item object and updates the current weight of the rocket
