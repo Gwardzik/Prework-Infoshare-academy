@@ -23,5 +23,5 @@
  - need to lear how to debug, printf everywhere isnt the best option
  - got beter understanding of OOP, how to handel objects
  - still need to work on acces modifyers
- - 
-![Screenshot from 2022-11-04 14-38-45](https://user-images.githubusercontent.com/115525961/199986239-56f5cec1-57bd-4c16-b2a3-e666c02905c9.png)
+ - ![Screenshot from 2022-11-04 20-25-21](https://user-images.githubusercontent.com/115525961/200059141-1427d3a1-7d23-4420-8808-e4058c2dc650.png)
+
