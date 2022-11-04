@@ -1,6 +1,7 @@
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -44,6 +45,18 @@ public class Simulation {
 
 
         return itemListToSort;
+    }
+
+    ArrayList<Item> quickShort(ArrayList<Item> itemListToShort, int smallIndex, int bigIndex) {
+        // under construction
+        int pivot = itemListToShort.get(bigIndex).weight;
+        int leftCheck = 0;
+        int rightCheck = 0;
+
+        if (itemListToShort.get(leftCheck).weight > pivot) {
+            leftCheck++;
+        }
+        return itemListToShort;
     }
 
     ArrayList<Rocket> loadU1(ArrayList<Item> newItem) {
@@ -110,33 +123,32 @@ public class Simulation {
 
     int runSimulation(ArrayList<Rocket> rocketList) {
         int currentCost = 0;
-        System.out.println("Simulation has starte\n" +
-                "--------------------------------------------------------------");
-        //System.out.println(rocketList.get(0));
 
         Rocket currentRocket = new Rocket();
+
         for (int i = 0; i < rocketList.size(); i++) {
             currentRocket = rocketList.get(i);
-            System.out.println("Prepering for lounch seguens 3..2..1..0 blast off");
-            while (!currentRocket.launch()) {
-                currentCost += currentRocket.rocketPrice;
-                System.out.println("booom launching,try againm (");
-            }
-            System.out.println("launching sucess !!!!");
-            System.out.println("Prepering for landing aprouch 3..2..1..0 blast off");
-            while (!currentRocket.land()) {
-                currentCost += currentRocket.rocketPrice;
-                System.out.println("booom landing, im sorry, try again ;(");
-            }
-            System.out.println("landing sucess !!!!");
 
-            currentCost += currentRocket.rocketPrice;
-            System.out.println(currentCost);
-            System.out.println("Current cost" + currentCost + "\n " + "---------------------");
+            boolean succeddedLaunchAndLanding = false;
+
+            while (!succeddedLaunchAndLanding) {
+                System.out.println("Preapering Rocket " + i);
+                while (!currentRocket.launch()) {
+                    currentCost += currentRocket.rocketPrice;
+                    System.out.println("Boom Launching");
+                }
+                System.out.println("Rocket has Launched");
+
+                if (currentRocket.land()) {
+                    currentCost += currentRocket.rocketPrice;
+                    succeddedLaunchAndLanding = true;
+                    System.out.println("Rocket has Landed");
+                }
+                else System.out.println("Boom Landing");
+                
+            }
+
         }
-        System.out.println("Simulation has ended" +
-                "--------------------------------------------------------------");
-
         return currentCost;
     }
 }

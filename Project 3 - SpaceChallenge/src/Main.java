@@ -59,19 +59,19 @@ public class Main {
             // loading U2 Rocket for phase two
             ArrayList<Rocket> phase2U2Rocket;
             phase2U2Rocket = simulation.loadU2(phase2ItemList);
-
+            System.out.println("------------------------------------------");
+            
             // cost simulation for U1 phase 1 and two
-/*
-           costU1Phase1 = simulation.runSimulation(phase1U1Rocket);
-           costU1Phase2 = simulation.runSimulation((phase2U1Rocket));
 
+            costU1Phase1 = simulation.runSimulation(phase1U1Rocket);
+            costU1Phase2 = simulation.runSimulation((phase2U1Rocket));
             System.out.println(costU1Phase1 + "   " + costU1Phase2);
 
             // cost simulation for U2 Phase and two with integrated loading
             costU2Phase1 = simulation.runSimulation(phase1U2Rocket);
             costU2Phase2 = simulation.runSimulation(phase2U2Rocket);
             System.out.println(costU2Phase1 + "   " + costU2Phase2);
-*/
+
         } catch (FileNotFoundException notFoundException) {
             System.out.println("FileNotFound exeptiona has been ussed");
         }
