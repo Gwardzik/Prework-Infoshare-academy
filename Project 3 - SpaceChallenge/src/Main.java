@@ -14,8 +14,20 @@ public class Main {
         int costU1Phase2 = 0;
         int costU2Phase1 = 0;
         int costU2Phase2 = 0;
-        for (int i = 0; i < 100; i++) {
+
+        int totalCostU1P1 = 0;
+        int totalCostU1P2 = 0;
+        int totalCostU2P1 = 0;
+        int totalCostU2P2 = 0;
+
+        int u1AverageCost = 0;
+        int u2AverageCost = 0;
+
+        int numberOFrandSimulations = 1000000;
+
+        for (int i = 0; i < numberOFrandSimulations; i++) {
             {
+                System.out.println("Number of simulation" + i);
             }
             try {
                 //Loading Items for phase one and two
@@ -81,11 +93,34 @@ public class Main {
                 costU2Phase2 = simulation.runSimulation(phase2U2Rocket);
 
                 System.out.println(costU2Phase1 + "   " + costU2Phase2);
-
+                totalCostU1P1 += costU1Phase1;
+                totalCostU1P2 += costU1Phase2;
+                totalCostU2P1 += costU2Phase1;
+                totalCostU2P2 += costU2Phase2;
             } catch (FileNotFoundException notFoundException) {
                 System.out.println("FileNotFound exeptiona has been ussed");
             }
 
         }
+        System.out.println("\n");
+        u1AverageCost = (totalCostU1P1 + totalCostU1P2) / numberOFrandSimulations;
+        u2AverageCost = (totalCostU2P1 + totalCostU2P2) / numberOFrandSimulations;
+        System.out.println("Cost summary in milions:" );
+        System.out.println("Number of simulations:" + numberOFrandSimulations);
+        System.out.println("Average U1 Rocket Phase 1" + totalCostU1P1/numberOFrandSimulations);
+        System.out.println("Average U1 Rocket Phase 2" + totalCostU1P2/numberOFrandSimulations);
+        System.out.println("Average U2 Rocket Phase 1" + totalCostU2P1/numberOFrandSimulations);
+        System.out.println("Average U2 Rocket Phase 1" + totalCostU2P2/numberOFrandSimulations);
+        System.out.println();
+        System.out.println("Average cost for U1 " + u1AverageCost);
+        System.out.println("Average cost for U2 " + u2AverageCost);
+        if(u1AverageCost < u2AverageCost)
+            System.out.println("\n More cost efficient rocket is U1 rocket");
+            else
+            System.out.println("\n More cost efficient rocket is U2 rocket");
+        System.out.println("");
+
     }
+
+
 }
