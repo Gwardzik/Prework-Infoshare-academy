@@ -128,26 +128,32 @@ public class Simulation {
 
         for (int i = 0; i < rocketList.size(); i++) {
             currentRocket = rocketList.get(i);
+            int rocketNumber = i +1;
 
-            boolean succeddedLaunchAndLanding = false;
+            boolean succeedLaunchAndLanding = false;
 
-            while (!succeddedLaunchAndLanding) {
-                System.out.println("Preapering Rocket " + i);
+            while (!succeedLaunchAndLanding) {
+                System.out.println("Preapering Rocket " + rocketNumber);
                 while (!currentRocket.launch()) {
                     currentCost += currentRocket.rocketPrice;
-                    System.out.println("Boom Launching");
+                    System.out.println("Boom Launching <------ BOOOOOM !!! ----");
                 }
-                System.out.println("Rocket has Launched");
+                System.out.println("Rocket "+ rocketNumber +" has Launched");
 
                 if (currentRocket.land()) {
                     currentCost += currentRocket.rocketPrice;
-                    succeddedLaunchAndLanding = true;
-                    System.out.println("Rocket has Landed");
+                    succeedLaunchAndLanding = true;
+                    System.out.println("Rocket " + rocketNumber + " has Landed");
+                    System.out.println(currentCost);
                 }
-                else System.out.println("Boom Landing");
-                
-            }
+                else{
+                    currentCost += currentRocket.rocketPrice;
+                    System.out.println("Boom Landing<------ BOOOOOM !!! ----");
+                }
 
+
+            }
+            System.out.println("---------");
         }
         return currentCost;
     }
