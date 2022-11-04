@@ -1,6 +1,5 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 public class Main {
@@ -10,22 +9,22 @@ public class Main {
 
         File phase1File = new File("/home/patryk/Desktop/Projekty/prework dla infoshare/Project 3 - SpaceChallenge/src/cargo files/Phase-1.txt");
         File phase2File = new File("/home/patryk/Desktop/Projekty/prework dla infoshare/Project 3 - SpaceChallenge/src/cargo files/Phase-2.txt");
-        int costU1Phase1 = 0;
-        int costU1Phase2 = 0;
-        int costU2Phase1 = 0;
-        int costU2Phase2 = 0;
+        int costU1Phase1 ;
+        int costU1Phase2 ;
+        int costU2Phase1 ;
+        int costU2Phase2 ;
 
         int totalCostU1P1 = 0;
         int totalCostU1P2 = 0;
         int totalCostU2P1 = 0;
         int totalCostU2P2 = 0;
 
-        int u1AverageCost = 0;
-        int u2AverageCost = 0;
+        int u1AverageCost ;
+        int u2AverageCost ;
 
-        int numberOFrandSimulations = 1000000;
+        int numberOfRandSimulations = 1000000;
 
-        for (int i = 0; i < numberOFrandSimulations; i++) {
+        for (int i = 0; i < numberOfRandSimulations; i++) {
             {
                 System.out.println("Number of simulation" + i);
             }
@@ -98,19 +97,21 @@ public class Main {
                 totalCostU2P1 += costU2Phase1;
                 totalCostU2P2 += costU2Phase2;
             } catch (FileNotFoundException notFoundException) {
-                System.out.println("FileNotFound exeptiona has been ussed");
+                System.out.println("FileNotFound exception has been used");
             }
 
         }
         System.out.println("\n");
-        u1AverageCost = (totalCostU1P1 + totalCostU1P2) / numberOFrandSimulations;
-        u2AverageCost = (totalCostU2P1 + totalCostU2P2) / numberOFrandSimulations;
-        System.out.println("Cost summary in milions:" );
-        System.out.println("Number of simulations:" + numberOFrandSimulations);
-        System.out.println("Average U1 Rocket Phase 1" + totalCostU1P1/numberOFrandSimulations);
-        System.out.println("Average U1 Rocket Phase 2" + totalCostU1P2/numberOFrandSimulations);
-        System.out.println("Average U2 Rocket Phase 1" + totalCostU2P1/numberOFrandSimulations);
-        System.out.println("Average U2 Rocket Phase 1" + totalCostU2P2/numberOFrandSimulations);
+        
+        u1AverageCost = (totalCostU1P1 + totalCostU1P2) / numberOfRandSimulations;
+        u2AverageCost = (totalCostU2P1 + totalCostU2P2) / numberOfRandSimulations;
+
+        System.out.println("Cost summary in millions:" );
+        System.out.println("Number of simulations:" + numberOfRandSimulations);
+        System.out.println("Average U1 Rocket P1 " + totalCostU1P1/numberOfRandSimulations);
+        System.out.println("Average U1 Rocket P2 " + totalCostU1P2/numberOfRandSimulations);
+        System.out.println("Average U2 Rocket P1 " + totalCostU2P1/numberOfRandSimulations);
+        System.out.println("Average U2 Rocket P2 " + totalCostU2P2/numberOfRandSimulations);
         System.out.println();
         System.out.println("Average cost for U1 " + u1AverageCost);
         System.out.println("Average cost for U2 " + u2AverageCost);
@@ -118,7 +119,6 @@ public class Main {
             System.out.println("\n More cost efficient rocket is U1 rocket");
             else
             System.out.println("\n More cost efficient rocket is U2 rocket");
-        System.out.println("");
 
     }
 
