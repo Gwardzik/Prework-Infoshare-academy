@@ -19,5 +19,9 @@
   - file manipulations is a bit cleaer but need more work
 
 # 5. Space Challenge- to be expected
-
-![Screenshot from 2022-10-25 22-56-13](https://user-images.githubusercontent.com/115525961/197880329-9394187e-890f-4875-9c85-7a7c6e8accc9.png)
+ **what did i learn:**
+ - need to lear how to debug, printf everywhere isnt the best option
+ - got beter understanding of OOP, how to handel objects
+ - still need to work on acces modifyers
+ - 
+![Screenshot from 2022-11-04 14-38-45](https://user-images.githubusercontent.com/115525961/199986239-56f5cec1-57bd-4c16-b2a3-e666c02905c9.png)
