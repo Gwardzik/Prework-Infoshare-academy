@@ -150,8 +150,6 @@ public class Simulation {
                     currentCost += currentRocket.rocketPrice;
                     System.out.println("Boom Landing<------ BOOOOOM !!! ----");
                 }
-
-
             }
             System.out.println("---------");
         }
