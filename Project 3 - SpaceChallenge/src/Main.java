@@ -22,7 +22,7 @@ public class Main {
         int u1AverageCost ;
         int u2AverageCost ;
 
-        int numberOfRandSimulations = 1000000;
+        int numberOfRandSimulations = 100000;
 
         for (int i = 0; i < numberOfRandSimulations; i++) {
             {

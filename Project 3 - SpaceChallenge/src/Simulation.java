@@ -54,6 +54,7 @@ public class Simulation {
 
         if (itemListToShort.get(leftCheck).weight > pivot) {
             leftCheck++;
+            rightCheck++;
         }
         return itemListToShort;
     }
