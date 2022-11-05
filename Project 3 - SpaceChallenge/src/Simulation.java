@@ -56,6 +56,9 @@ public class Simulation {
             leftCheck++;
             rightCheck++;
         }
+        bubbleSort(leftCheck , itemListToShort);
+        bubbleSort((rightCheck, itemListToShort));
+
         return itemListToShort;
     }
 
