@@ -24,17 +24,18 @@ public class Main {
 
         int numberOfRandSimulations = 100000;
 
+        ArrayList<Item> phase1ItemList;
+        ArrayList<Item> phase2ItemList;
+
         for (int i = 0; i < numberOfRandSimulations; i++) {
             {
             }
             try {
                 //Loading Items for phase one and two
 
-                ArrayList<Item> phase1ItemList;
                 phase1ItemList = simulation.loadItems(phase1File);
                 phase1ItemList = simulation.bubbleSort(phase1ItemList);
 
-                ArrayList<Item> phase2ItemList;
                 phase2ItemList = simulation.loadItems(phase2File);
                 phase2ItemList = simulation.bubbleSort(phase2ItemList);
 
@@ -76,6 +77,7 @@ public class Main {
             } catch (FileNotFoundException notFoundException) {
                 System.out.println("FileNotFound exception has been used");
             }
+            simulation.printItemList(phase1ItemList);
 
         }
         System.out.println("\n");

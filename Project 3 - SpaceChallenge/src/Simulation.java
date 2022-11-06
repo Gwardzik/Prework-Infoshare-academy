@@ -121,7 +121,6 @@ public class Simulation {
 
         for (int i = 0; i < rocketList.size(); i++) {
             currentRocket = rocketList.get(i);
-            int rocketNumber = i +1;
 
             boolean succeedLaunchAndLanding = false;
 
@@ -133,7 +132,6 @@ public class Simulation {
                 if (currentRocket.land()) {
                     currentCost += currentRocket.rocketPrice;
                     succeedLaunchAndLanding = true;
-                    System.out.println(currentCost);
                 }
                 else{
                     currentCost += currentRocket.rocketPrice;
@@ -141,5 +139,11 @@ public class Simulation {
             }
         }
         return currentCost;
+    }
+
+    void printItemList(ArrayList<Item> item){
+        for (int i = 0; i < item.size() ; i++) {
+            System.out.println(item.get(i));
+        }
     }
 }
