@@ -143,13 +143,14 @@ public class Simulation {
 
     void printItemList(ArrayList<Item> item){
 
-        for (int i = 0; i < item.size() ; i++) {
-            System.out.println(item.get(i).name + "  " + item.get(i).weight);
+
+        for (Item value : item) {
+            System.out.println(value.name + "  " + value.weight);
         }
     }
     void printRocketList(ArrayList<Rocket> rocket){
-        for (int i = 0; i < rocket.size() ; i++) {
-            System.out.println(rocket.get(i).currentRocketWeight );
+        for (Rocket value : rocket) {
+            System.out.println("U1 Rocket  " + value.currentRocketWeight);
         }
     }
 }
