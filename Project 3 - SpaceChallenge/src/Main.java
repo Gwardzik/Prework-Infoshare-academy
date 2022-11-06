@@ -53,6 +53,12 @@ public class Main {
                 ArrayList<Rocket> phase2U1Rocket;
                 phase2U1Rocket = simulation.loadU1(phase2ItemList);
 
+                if (i == 0) {
+                    System.out.println("           Stage 1 Rocket U1\n");
+                    simulation.printRocketList(phase1U1Rocket);
+                    System.out.println("           Stage 2 Rocket U1\n");
+                    simulation.printRocketList(phase2U1Rocket);
+                }
 
                 phase1ItemList = simulation.loadItems(phase1File);
                 phase1ItemList = simulation.bubbleSort(phase1ItemList);
