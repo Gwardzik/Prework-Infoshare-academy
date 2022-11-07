@@ -46,14 +46,28 @@ public class Simulation {
         return itemListToSort;
     }
 
-    ArrayList<Item> quickShort(ArrayList<Item> itemListToShort, int smallIndex, int bigIndex) {
-        printItemList(itemListToShort);
-        int leftbox = smallIndex;
-        int rightBox = bigIndex - 2;
-        System.out.println("index value" + leftbox + rightBox);
-        
+    ArrayList<Item> quickShort(ArrayList<Item> itemListToSort, int smallIndex, int bigIndex) {
+        printItemList(itemListToSort);
+        //first step- chousing a pivot
+        int pivot = itemListToSort.get(bigIndex).weight;
+        // second moving left and right of the pivot
 
-        return itemListToShort;
+        int leftBox = smallIndex;
+        int rightBox = bigIndex - 1;
+        Item tempItem;
+
+       while(itemListToSort.get(leftBox).weight < pivot ){
+           leftBox++;
+       }
+       while(itemListToSort.get(rightBox).weight > pivot){
+           rightBox--;
+       }
+
+       tempItem = itemListToSort.get(leftBox);
+       itemListToSort.set(leftBox , itemListToSort.get(rightBox));
+       itemListToSort.set(rightBox, tempItem);
+       
+        return itemListToSort;
     }
 
     ArrayList<Rocket> loadU1(ArrayList<Item> newItem) {

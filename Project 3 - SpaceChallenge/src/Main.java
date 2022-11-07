@@ -35,7 +35,7 @@ public class Main {
 
                 phase1ItemList = simulation.loadItems(phase1File);
                // phase1ItemList = simulation.bubbleSort(phase1ItemList);
-                phase1ItemList = simulation.quickShort(phase1ItemList , 0, phase1ItemList.size());
+                phase1ItemList = simulation.quickShort(phase1ItemList , 0, phase1ItemList.size()-1);
 
                /* phase2ItemList = simulation.loadItems(phase2File);
                 phase2ItemList = simulation.bubbleSort(phase2ItemList);
