@@ -47,15 +47,11 @@ public class Simulation {
     }
 
     ArrayList<Item> quickShort(ArrayList<Item> itemListToShort, int smallIndex, int bigIndex) {
-        // under construction
-        int pivot = itemListToShort.get(bigIndex).weight;
-        int leftCheck = 0;
-        int rightCheck = 0;
-
-        if (itemListToShort.get(leftCheck).weight > pivot) {
-
-        }
-
+        printItemList(itemListToShort);
+        int leftbox = smallIndex;
+        int rightBox = bigIndex - 2;
+        System.out.println("index value" + leftbox + rightBox);
+        
 
         return itemListToShort;
     }
@@ -132,8 +128,7 @@ public class Simulation {
                 if (currentRocket.land()) {
                     currentCost += currentRocket.rocketPrice;
                     succeedLaunchAndLanding = true;
-                }
-                else{
+                } else {
                     currentCost += currentRocket.rocketPrice;
                 }
             }
@@ -141,14 +136,15 @@ public class Simulation {
         return currentCost;
     }
 
-    void printItemList(ArrayList<Item> item){
+    void printItemList(ArrayList<Item> item) {
 
 
         for (Item value : item) {
             System.out.println(value.name + "  " + value.weight);
         }
     }
-    void printRocketList(ArrayList<Rocket> rocket){
+
+    void printRocketList(ArrayList<Rocket> rocket) {
         for (Rocket value : rocket) {
             System.out.println("U1 Rocket  " + value.currentRocketWeight);
         }

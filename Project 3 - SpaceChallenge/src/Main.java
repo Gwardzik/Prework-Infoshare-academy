@@ -22,7 +22,7 @@ public class Main {
         int u1AverageCost;
         int u2AverageCost;
 
-        int numberOfRandSimulations = 1000;
+        int numberOfRandSimulations = 1;
 
         ArrayList<Item> phase1ItemList;
         ArrayList<Item> phase2ItemList;
@@ -34,16 +34,17 @@ public class Main {
                 //Loading Items for phase one and two
 
                 phase1ItemList = simulation.loadItems(phase1File);
-                phase1ItemList = simulation.bubbleSort(phase1ItemList);
+               // phase1ItemList = simulation.bubbleSort(phase1ItemList);
+                phase1ItemList = simulation.quickShort(phase1ItemList , 0, phase1ItemList.size());
 
-                phase2ItemList = simulation.loadItems(phase2File);
+               /* phase2ItemList = simulation.loadItems(phase2File);
                 phase2ItemList = simulation.bubbleSort(phase2ItemList);
 
                 //Printing Item List
                 if (i == 0) {
-                    System.out.println("           Stage 1 Items - sorted\n");
+                    System.out.println("\n           Stage 1 Items - sorted\n");
                     simulation.printItemList(phase1ItemList);
-                    System.out.println("           Stage 2 Items - sorted\n");
+                    System.out.println("\n           Stage 2 Items - sorted\n");
                     simulation.printItemList(phase2ItemList);
                 }
                 //phase 1 rocket load U1
@@ -54,9 +55,9 @@ public class Main {
                 phase2U1Rocket = simulation.loadU1(phase2ItemList);
 
                 if (i == 0) {
-                    System.out.println("           Stage 1 Rocket U1\n");
+                    System.out.println("\n           Stage 1 Rocket U1\n");
                     simulation.printRocketList(phase1U1Rocket);
-                    System.out.println("           Stage 2 Rocket U1\n");
+                    System.out.println("\n           Stage 2 Rocket U1\n");
                     simulation.printRocketList(phase2U1Rocket);
                 }
 
@@ -75,6 +76,13 @@ public class Main {
                 ArrayList<Rocket> phase2U2Rocket;
                 phase2U2Rocket = simulation.loadU2(phase2ItemList);
 
+                if (i == 0) {
+                    System.out.println("           Stage 1 Rocket U2\n");
+                    simulation.printRocketList(phase1U2Rocket);
+                    System.out.println("           Stage 2 Rocket U2\n");
+                    simulation.printRocketList(phase2U2Rocket);
+                }
+
 
                 costU1Phase1 = simulation.runSimulation(phase1U1Rocket);
                 costU1Phase2 = simulation.runSimulation((phase2U1Rocket));
@@ -86,13 +94,13 @@ public class Main {
                 totalCostU1P1 += costU1Phase1;
                 totalCostU1P2 += costU1Phase2;
                 totalCostU2P1 += costU2Phase1;
-                totalCostU2P2 += costU2Phase2;
+                totalCostU2P2 += costU2Phase2;*/
             } catch (FileNotFoundException notFoundException) {
                 System.out.println("FileNotFound exception has been used");
             }
 
         }
-        System.out.println("\n");
+        /*System.out.println("\n");
 
         u1AverageCost = (totalCostU1P1 + totalCostU1P2) / numberOfRandSimulations;
         u2AverageCost = (totalCostU2P1 + totalCostU2P2) / numberOfRandSimulations;
@@ -110,7 +118,7 @@ public class Main {
             System.out.println("\n More cost efficient rocket is U1 rocket");
         else
             System.out.println("\n More cost efficient rocket is U2 rocket");
-
+*/
     }
 
 
