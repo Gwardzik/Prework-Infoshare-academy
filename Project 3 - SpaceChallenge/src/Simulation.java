@@ -52,21 +52,28 @@ public class Simulation {
         int pivot = itemListToSort.get(bigIndex).weight;
         // second moving left and right of the pivot
 
-        int leftBox = smallIndex;
-        int rightBox = bigIndex - 1;
+        int leftIndex = smallIndex;
+        int rightIndex = bigIndex - 1;
         Item tempItem;
 
-       while(itemListToSort.get(leftBox).weight < pivot ){
-           leftBox++;
-       }
-       while(itemListToSort.get(rightBox).weight > pivot){
-           rightBox--;
-       }
+        while (leftIndex < rightIndex) {
+            while (itemListToSort.get(leftIndex).weight <= pivot && leftIndex < rightIndex) {
+                leftIndex++;
+            }
+            while (itemListToSort.get(rightIndex).weight > pivot && rightIndex > leftIndex) {
+                rightIndex--;
+            }
+            tempItem = itemListToSort.get(bigIndex);
+            itemListToSort.set(bigIndex, itemListToSort.get(leftIndex));
+            itemListToSort.set(leftIndex, tempItem);
 
-       tempItem = itemListToSort.get(leftBox);
-       itemListToSort.set(leftBox , itemListToSort.get(rightBox));
-       itemListToSort.set(rightBox, tempItem);
-       
+            tempItem = itemListToSort.get(leftIndex);
+            itemListToSort.set(leftIndex, itemListToSort.get(rightIndex));
+            itemListToSort.set(rightIndex, tempItem);
+        }
+        System.out.println("\n");
+        printItemList(itemListToSort);
+
         return itemListToSort;
     }
 
@@ -162,5 +169,12 @@ public class Simulation {
         for (Rocket value : rocket) {
             System.out.println("U1 Rocket  " + value.currentRocketWeight);
         }
+    }
+
+    void swap(ArrayList<Item> itemListToSort, int leftIndex, int rightIndex){
+        Item tempItem;
+//        tempItem = itemListToSort.get(bigIndex);
+//        itemListToSort.set(bigIndex, itemListToSort.get(leftIndex));
+  //      itemListToSort.set(leftIndex, tempItem);
     }
 }
