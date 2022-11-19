@@ -18,7 +18,7 @@
   - i shoud find some graphical representation for building a projec. 
   - file manipulations is a bit cleaer but need more work
 
-# 5. Space Challenge- to be expected
+# 5. Space Challenge- to be expected.
  **what did i learn:**
  - need to lear how to debug, printf everywhere isnt the best option
  - got beter understanding of OOP, how to handel objects
