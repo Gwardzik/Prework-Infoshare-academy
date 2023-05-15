@@ -20,7 +20,7 @@
 
 # 5. Space Challenge- to be expected.
  **what did i learn:**
- - need to lear how to debug, printf everywhere isnt the best option
+ - need to lear how to debug, printf everywhere isnt the best option.
  - got beter understanding of OOP, how to handel objects
  - still need to work on acces modifyers
  - ![Screenshot from 2022-11-04 20-25-21](https://user-images.githubusercontent.com/115525961/200059141-1427d3a1-7d23-4420-8808-e4058c2dc650.png)
