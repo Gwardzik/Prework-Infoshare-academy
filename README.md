@@ -3,7 +3,7 @@
 ## List of projects:
 
 
-# 1. TicTacToe.
+# 1. TicTacToe
   **what did i learn:**
   - how important and usefull are tests in coding
 
